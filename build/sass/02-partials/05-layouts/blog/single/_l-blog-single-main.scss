@@ -1,0 +1,15 @@
+// Single Post Main Content
+
+.post-content-wrapper{
+  .post-content{
+  }
+}
+
+.post-content{
+  > *:first-child{
+    margin-top: 0;
+  }
+  > *:last-child{
+    margin-bottom: 0;
+  }
+}

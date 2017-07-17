@@ -1,0 +1,20 @@
+// Header Widgets
+
+  .header-widgets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include spacing(padding-top padding-bottom, 0.25);
+    @include spacing(padding-left padding-right);
+  }
+
+  .header-widgets-inner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint($s-md){
+      flex-wrap: nowrap;
+    }
+  }

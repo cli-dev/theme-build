@@ -1,0 +1,78 @@
+.acf-repeater,
+.acf-field-repeater{
+  width: 100%;
+  &:before{
+    display: none !important;
+  }
+  > .acf-label{
+    display: none;
+  }
+  > .acf-input{
+    width: 100% !important;
+    > .acf-repeater{
+      >.acf-table {
+        width: 100%;
+        margin: 0;
+        > tbody{
+          > .acf-row{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            position: relative;
+            border-bottom: #DFDFDF solid 1px;
+            &:nth-last-child(2){
+              border-bottom: none;
+            }
+            >.acf-row-handle{
+              width: auto;
+              display: flex;
+              align-items: center;
+              width: 120px;
+              height: 40px;
+              border: none !important;
+              &.order{
+                background: none;
+                border-top: none;
+                order: 1;
+                span{
+                  display: flex;
+                  align-items: center;
+                }
+              }
+              &.remove{
+                border: none;
+                order: 2;
+                justify-content: flex-end;
+                a.acf-icon{
+                  display: block;
+                  margin: 2px;
+                  position: relative;
+                  top: auto;
+                  display: block;
+                }
+              }
+            }
+            > .acf-fields{
+              position: relative;
+              order: 3;
+              width: 100%;
+              border: none;
+              border-top: #DFDFDF solid 1px;
+              @include spacing(padding-top padding-left, 0.25);
+            }
+          }  
+        }
+      }
+    }
+  }
+  .acf-repeater{
+    width: 100%;
+    td.acf-fields{
+      @each $breakpoint, $gap in $all-gaps{
+        @include breakpoint($breakpoint) {
+          padding: #{$gap*0.25}vw 0 0 #{$gap*0.25}vw !important;
+        }
+      }
+    }
+  }
+}

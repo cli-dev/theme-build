@@ -1,0 +1,33 @@
+*{
+  box-sizing: border-box;
+}
+
+html{
+  overflow-x: hidden !important;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+input{
+  font-family: 'Lato', sans-serif;
+}
+
+.acf-icon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &.small{
+    @include fluid-type(width height, $s-sml, $xxx-lrg, 15px, 22px);
+  }
+  &:after{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

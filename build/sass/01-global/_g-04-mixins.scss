@@ -1,0 +1,233 @@
+@mixin bg-opacity($color, $opacity) {
+  background: $color; /* The Fallback */
+  background: rgba($color, $opacity);
+}
+
+@mixin ie($ver) {
+  html[data-useragent*='MSIE $ver']  {
+    @content;
+  }
+}
+
+@mixin rem($property, $px-values) {
+  // Convert the baseline into rems
+  $baseline-rem: $base-fs / 1rem;
+  // Print the first line in pixel values
+  #{$property}: $px-values;
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number" {
+    #{$property}: $px-values / $baseline-rem; 
+  }
+  @else {
+    // Create an empty list that we can dump values into
+    $rem-values: unquote("");
+    @each $value in $px-values {
+      // If the value is zero or a string or a color, return unchanged input
+      @if $value == 0 or type-of($value) == "string" or type-of($value) == "color" {
+        $rem-values: append($rem-values, $value); 
+      }
+      @else {
+        $rem-values: append($rem-values, $value / $baseline-rem); 
+      } 
+    }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values; 
+  } 
+}
+
+@mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
+  @each $property in $properties {
+    #{$property}: $min-value;
+  }
+
+  @media screen and (min-width: $min-vw) {
+    @each $property in $properties {
+      #{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+    }
+  }
+
+  @media screen and (min-width: $max-vw) {
+    @each $property in $properties {
+      #{$property}: $max-value;
+    }
+  }
+}
+
+@mixin spacing($properties, $size: 1, $neg: false, $calc: false, $calc-size: 100%) {
+  // Base size
+    @each $property in $properties {
+      @if $calc == true{
+        @if $neg == true{
+          #{$property}: calc(#{$calc-size} - #{$s-sml-g*$size}vw);
+        }
+        @else{
+          #{$property}: calc(#{$calc-size} + #{$s-sml-g*$size}vw);
+        }
+      }
+      @else{
+        @if $neg == true{
+          #{$property}: -#{$s-sml-g*$size}vw;
+        }
+        @else{
+          #{$property}: #{$s-sml-g * $size}vw;
+        }
+      }
+    }
+  // Breakpoint Sizes
+  @each $breakpoint, $gap in $all-gaps{
+    @include breakpoint($breakpoint) {
+      @each $property in $properties {
+        @if $calc == true{
+          @if $neg == true{
+            #{$property}: calc(#{$calc-size} - #{$gap*$size}vw);
+          }
+          @else{
+            #{$property}: calc(#{$calc-size} + #{$gap*$size}vw);
+          }
+        }
+        @else{
+          @if $neg == true{
+            #{$property}: -#{$gap*$size}vw;
+          }
+          @else{
+            #{$property}: #{$gap * $size}vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin sml-spacing($properties, $size: 1, $neg: false, $calc: false, $calc-size: 100%) {
+  // Base size
+    @each $property in $properties {
+      @if $calc == true{
+        @if $neg == true{
+          #{$property}: calc(#{$calc-size} - #{$s-sml-g*$size}vw);
+        }
+        @else{
+          #{$property}: calc(#{$calc-size} + #{$s-sml-g*$size}vw);
+        }
+      }
+      @else{
+        @if $neg == true{
+          #{$property}: -#{$s-sml-g*$size}vw;
+        }
+        @else{
+          #{$property}: #{$s-sml-g * $size}vw;
+        }
+      }
+    }
+  // Breakpoint Sizes
+  @each $breakpoint, $gap in $sml-gaps{
+    @include breakpoint($breakpoint) {
+      @each $property in $properties {
+        @if $calc == true{
+          @if $neg == true{
+            #{$property}: calc(#{$calc-size} - #{$gap*$size}vw);
+          }
+          @else{
+            #{$property}: calc(#{$calc-size} + #{$gap*$size}vw);
+          }
+        }
+        @else{
+          @if $neg == true{
+            #{$property}: -#{$gap*$size}vw;
+          }
+          @else{
+            #{$property}: #{$gap * $size}vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin md-spacing($properties, $size: 1, $neg: false, $calc: false, $calc-size: 100%) {
+  // Breakpoint Sizes
+  @each $breakpoint, $gap in $md-gaps{
+    @include breakpoint($breakpoint) {
+      @each $property in $properties {
+        @if $calc == true{
+          @if $neg == true{
+            #{$property}: calc(#{$calc-size} - #{$gap*$size}vw);
+          }
+          @else{
+            #{$property}: calc(#{$calc-size} + #{$gap*$size}vw);
+          }
+        }
+        @else{
+          @if $neg == true{
+            #{$property}: -#{$gap*$size}vw;
+          }
+          @else{
+            #{$property}: #{$gap * $size}vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin lrg-spacing($properties, $size: 1, $neg: false, $calc: false, $calc-size: 100%) {
+  // Breakpoint Sizes
+  @each $breakpoint, $gap in $lrg-gaps{
+    @include breakpoint($breakpoint) {
+      @each $property in $properties {
+        @if $calc == true{
+          @if $neg == true{
+            #{$property}: calc(#{$calc-size} - #{$gap*$size}vw);
+          }
+          @else{
+            #{$property}: calc(#{$calc-size} + #{$gap*$size}vw);
+          }
+        }
+        @else{
+          @if $neg == true{
+            #{$property}: -#{$gap*$size}vw;
+          }
+          @else{
+            #{$property}: #{$gap * $size}vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+@mixin poly-fluid-sizing($property, $map) {
+  // Get the number of provided breakpoints
+  $length: length(map-keys($map));
+  
+  // Error if the number of breakpoints is < 2
+  @if ($length < 2) {
+    @error "poly-fluid-sizing() $map requires at least values"
+  }
+
+  // Sort the map by viewport width (key)
+  $map: map-sort($map);
+  $keys: map-keys($map);
+
+  // Minimum size
+  #{$property}: map-get($map, nth($keys,1));
+  
+  // Interpolated size through breakpoints
+  @for $i from 1 through ($length - 1) {
+    @media (min-width:nth($keys,$i)) {
+      $value1: map-get($map, nth($keys,$i));
+      $value2: map-get($map, nth($keys,($i + 1)));
+      // If values are not equal, perform linear interpolation
+      @if ($value1 != $value2) {
+        #{$property}: linear-interpolation((nth($keys,$i): $value1, nth($keys,($i+1)): $value2));
+      } @else {
+        #{$property}: $value1;
+      }
+    }
+  }
+  
+  // Maxmimum size
+  @media (min-width:nth($keys,$length)) {
+    #{$property}: map-get($map, nth($keys,$length));
+  }
+}
+

@@ -1,0 +1,32 @@
+# =============================================
+# PROJECT METADATA
+# =============================================
+
+proj_name:         CDM Theme
+
+dist_dir:          dist
+build_dir:         build
+tmp_dir:           tmp
+
+# tmp folders
+
+tmp_imgs_dir:      <%= tmp_dir %>/imgs
+tmp_js_dir:        <%= tmp_dir %>/js
+tmp_fonts_dir:     <%= tmp_dir %>/fonts
+tmp_css_dir:       <%= tmp_dir %>/css
+
+# build folders
+
+build_imgs_dir:    <%= build_dir %>/imgs
+build_js_dir:      <%= build_dir %>/js
+build_fonts_dir:   <%= build_dir %>/fonts
+build_css_dir:     <%= build_dir %>/css
+build_sass_dir:    <%= build_dir %>/sass
+build_php_dir:     <%= build_dir %>/php
+
+# dist folders
+
+dist_imgs_dir:    <%= dist_dir %>/imgs
+dist_js_dir:      <%= dist_dir %>/js
+dist_fonts_dir:   <%= dist_dir %>/fonts
+dist_css_dir:     <%= dist_dir %>/css

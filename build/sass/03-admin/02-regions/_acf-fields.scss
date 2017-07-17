@@ -1,0 +1,103 @@
+.acf-postbox.seamless{
+  @include spacing(padding, 0.25);
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
+}
+
+
+.acf-fields{
+  display: flex;
+  flex-wrap: wrap;
+  .acf-postbox.seamless > &.inside{
+    display: flex !important;
+    flex-wrap: wrap;
+    margin: 0 !important;
+  }
+  .acf-postbox.seamless > &.inside.-top,
+  &.-top{
+    @include spacing(margin-right margin-bottom, 0.25, true);
+  }
+  #poststuff &{
+    .section-header h2{
+      line-height: 1.3;
+      font-weight: 700;
+      padding: 0;
+      @include fluid-type(font-size, $s-sml, $xxx-lrg, 20px, 32px);
+    }
+  }
+  .acf-postbox.seamless > &.inside > .acf-field,
+  > .acf-field,
+  .acf-field{
+    padding: 0;
+    border: none !important;
+    @include spacing(margin-right margin-bottom, 0.25);
+    &.acf-field-divider{
+      padding: 0;
+      border-top: none;
+      width: 100%;
+      .acf-label{
+        display: none;
+      }
+      .acf-input{
+        display: none;
+      }
+    }
+    &.section-header{
+      width: 100%;
+      .acf-label{
+        display: none;
+      }
+      .acf-input{
+        border-top: solid 1px $off-white;
+        @include spacing(padding-top, 0.25);
+      }
+    }
+    &.acf-field-wysiwyg{
+      width: 100%;
+    }
+    .acf-input{
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      .acf-input-prepend{
+        order: 1;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .acf-input-append{
+        order: 3;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .acf-input-wrap{
+        order: 2;
+        flex: 1 1 auto;
+      }
+    }
+    p.description{
+      width: 100%;
+      order: 4;
+    }
+  }
+}
+
+.acf-row{
+  td.acf-fields{
+    @include spacing(padding-top, 0.25);
+  }
+}
+
+.acf-editor-wrap{
+  width: 100%;
+}
+
+.acf-actions{
+  @include spacing(margin-top, 0.125);
+}

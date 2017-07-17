@@ -1,0 +1,314 @@
+.cdm-row-wrapper{  
+  width: 100%;
+}
+
+.cdm-row-inner{
+  display: flex;
+  justify-content: center;
+  @include spacing(padding);
+  .no-padding &{
+    padding: 0;
+  }
+}
+
+.cdm-row-content-wrapper{
+  width: 100%;
+  &.has-col-gutters{
+    overflow: hidden;
+  }
+  &.in-grid{
+    width: 100%;
+    @include breakpoint($s-lrg){
+      width: $grid-width;
+    }
+  }
+}
+
+.cdm-row-content-inner{
+  width: 100%;
+  display: flex;    
+  flex-wrap: wrap;
+  &.col-gutters{
+    @include sml-spacing(width, 0.5, $calc: true);
+    @include md-spacing(width, 0.5, $calc: true);
+    @include lrg-spacing(width, 1, $calc: true);
+    @include sml-spacing(margin-bottom margin-right, 0.5, $neg: true);
+    @include md-spacing(margin-bottom margin-right, 0.5, $neg: true);
+    @include lrg-spacing(margin-bottom margin-right, 1, $neg: true);
+  }
+  &.nowrap{
+    flex-wrap: wrap;
+    @include breakpoint($s-lrg){
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.cdm-column-wrapper{
+  display: flex;
+  flex-direction: column;
+  .col-gutters &{
+    @include sml-spacing(margin-bottom margin-right, 0.5);
+    @include md-spacing(margin-bottom margin-right, 0.5);
+    @include lrg-spacing(margin-bottom margin-right, 1);
+  }
+}
+
+.cdm-column-inner{
+  width: 100%;
+  flex: 1 1 auto; 
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  &.direction-row{
+    flex-wrap: wrap;
+  }
+}
+
+// Column Sizes
+
+  .col-12{
+    width: 100%;  
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true);
+      @include lrg-spacing(width, 1, true, true);
+    }
+  }
+
+  .col-11{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 75%;
+    }
+    @include breakpoint($l-md){
+      width: 90%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 90%);
+      @include lrg-spacing(width, 1, true, true, 90%);
+    }  
+  }
+
+  .col-10{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 80%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 80%);
+      @include lrg-spacing(width, 1, true, true, 80%);
+    }  
+  }
+
+  .col-9{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 75%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 75%);
+      @include lrg-spacing(width, 1, true, true, 75%);
+    }     
+  }
+
+  .col-8{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 66.67%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 66.67%);
+      @include lrg-spacing(width, 1, true, true, 66.67%);
+    }
+  }
+
+  .col-7{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 58.33%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 58.33%);
+      @include lrg-spacing(width, 1, true, true, 58.33%);
+    }
+  }
+
+  .col-6{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 50%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 50%);
+      @include lrg-spacing(width, 1, true, true, 50%);
+    }
+  }
+
+  .col-5{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 41.67%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 41.67%);
+      @include lrg-spacing(width, 1, true, true, 41.67%);
+    }   
+  }
+
+  .col-4{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 33.33%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 33.33%);
+      @include lrg-spacing(width, 1, true, true, 33.33%);
+    }
+  }
+
+  .col-3{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 25%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 25%);
+      @include lrg-spacing(width, 1, true, true, 25%);
+    }
+  }
+
+  .col-2{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 25%;
+    }
+    @include breakpoint($s-lrg){
+      width: 20%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 25%);
+      @include lrg-spacing(width, 1, true, true, 20%);
+    }
+  }
+
+  .col-1{
+    width: 100%;
+    @include breakpoint($s-md){
+      width: 25%;
+    }
+    @include breakpoint($s-lrg){
+      width: 10%;
+    }
+    .col-gutters &{
+      @include sml-spacing(width, 0.5, true, true);
+      @include md-spacing(width, 0.5, true, true, 25%);
+      @include lrg-spacing(width, 1, true, true, 10%);
+    }
+  }
+
+@for $i from 1 through 12{
+  .order-#{$i}{
+    @include breakpoint($s-md){
+      order: $i;
+    }
+  }
+  .sml-col-#{$i}{
+    width: (12/$i)/12 * 100%;
+  }
+  .mds-col-#{$i}{
+    @include breakpoint($l-sml){
+      width: (12/$i)/12 * 100%;
+    }
+  }
+  .md-col-#{$i}{
+    @include breakpoint($s-md){
+      width: (12/$i)/12 * 100%;
+    }
+  }
+  .mdl-col-#{$i}{
+    @include breakpoint($l-md){
+      width: (12/$i)/12 * 100%;
+    }
+  }
+  .lrg-col-#{$i}{
+    @include breakpoint($s-lrg){
+      width: (12/$i)/12 * 100%;
+    }
+  }
+}
+
+// Directional Classes
+
+  .direction-row{
+    flex-direction: row; 
+  }
+  .direction-column{
+    flex-direction: column; 
+  }
+
+  .position-center{
+    justify-content: center;  
+  }
+  .position-start{
+    justify-content: flex-start;
+  }
+  .position-end{
+    justify-content: flex-end;
+  }
+  .position-space-between{
+    justify-content: space-between;
+  }
+  .position-space-around{
+    justify-content: space-around;
+  }
+
+  .align-content-center{
+    align-content: center;  
+  }
+  .align-content-start{
+    align-content: flex-start;
+  }
+  .align-content-end{
+    align-content: flex-end;
+  }
+  .align-content-stretch{
+    align-content: stretch;
+  }
+
+  .align-center{
+    align-items: center;  
+  }
+  .align-start{
+    align-items: flex-start;
+  }
+  .align-end{
+    align-items: flex-end;
+  }
+  .align-stretch{
+    align-items: stretch;
+  }
+
+
+  .single-align-center{
+    align-self: center;  
+  }
+  .single-align-start{
+    align-self: flex-start;
+  }
+  .single-align-end{
+    align-self: flex-end;
+  }
+  .single-align-stretch{
+    align-self: stretch;
+  }

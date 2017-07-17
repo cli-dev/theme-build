@@ -1,0 +1,123 @@
+// Team Grid
+
+  // Grid
+
+    .team.cdm-grid{
+      &.info-position-top,
+      &.info-position-left{
+        .team-member-img-wrapper{
+          order: 2;
+        }
+        .team-member-info{
+          order: 1;
+        }
+      }
+      &.info-position-right .team-member,
+      &.info-position-left .team-member{
+        @include breakpoint($s-md){
+          flex-direction: row;
+        }
+      }
+      .team-member-img-wrapper{
+        width: 100%;
+        &.landscape{
+          .team-member-img{
+            height: 100%;
+            width: auto;
+          }
+        }
+        &.portrait{
+          .team-member-img{
+            height: auto;
+            width: 100%;
+          }
+        }
+        &.square{
+          .team-member-img{
+            height: 100%;
+            width: 100%;
+          }
+        }
+        &:before{
+          content: '';
+          display: block;
+          width: 100%;
+          height: 0;
+          padding-bottom: 100%;
+        }
+        .team-member-img{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .hover-panel{
+          z-index: 5;
+        }
+      }
+    }
+
+    .team-member{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .team-member-info{
+        flex: 1 1 auto;
+      }
+    }
+
+    .team-member-img-wrapper{
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hover-panel{
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      display: flex;
+      transition: ease-in-out all 0.3s;
+      &:hover{
+        opacity: 1;
+      }
+      .hover-panel-inner{
+        flex: 1 1 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  
+  // Team bios
+
+    .team-bios{
+      display: none; 
+    }
+
+    .team-bio{
+      background-color: #fff;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      @include breakpoint($s-lrg-portrait){
+        max-width: 75vw;
+      }
+      @include breakpoint($s-sml-landscape){
+        max-width: 75vw;
+      }
+      @include breakpoint($s-lrg-landscape){
+        max-width: 50vw;
+      }
+    }
+
+    .team-member-title{
+      margin-bottom: 0;
+    }

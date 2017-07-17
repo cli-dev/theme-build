@@ -1,0 +1,39 @@
+{
+  "name": "cdm-theme",
+  "version": "1.0.0",
+  "authors": [
+    "Sam Rankin <sam.rankin92@gmail.com>"
+  ],
+  "license": "UNLICENSED",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "latest",
+    "animated.js": "latest",
+    "background-check": "latest",
+    "bigtext": "latest",
+    "breakpoint-sass": "latest",
+    "elegant-icons": "latest",
+    "fancybox": "latest",
+    "font-awesome": "latest",
+    "imagesloaded": "latest",
+    "isotope": "latest",
+    "isotope-packery": "latest",
+    "jquery.uniform": "latest",
+    "owl-carousel2": "latest",
+    "owl.carousel2.thumbs": "latest",
+    "mathsass": "latest",
+    "modernizer": "latest",
+    "modular-scale": "latest",
+    "normalize-css": "latest",
+    "uniform": "latest",
+    "waypoints": "latest",
+    "wow": "latest",
+    "zenscroll": "latest"
+  }
+}

@@ -1,0 +1,20 @@
+// Company Info
+
+  .company-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .address {
+      margin-right: -0.25rem;
+      .schema-info-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+      }
+      .schema-info{
+        display: block;
+        margin-right: 0.25rem;
+      }
+    }
+  }

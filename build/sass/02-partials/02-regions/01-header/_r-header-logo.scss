@@ -1,0 +1,67 @@
+// Main Logo
+
+  .site-header-logo{
+    display: flex;
+    @include sml-spacing(padding-top padding-bottom, 0.5);
+    @include md-spacing(padding-top padding-bottom, 0.25);
+    @include lrg-spacing(padding-top padding-bottom, 0.25);
+    .header-logo-link{
+      flex: 1 1 auto;
+      display: flex;
+      width: 100%;
+      position: relative;
+    }
+    .cdm-site-logo{
+      flex: 1 1 auto;
+      display: flex;
+      &.desktop-logo{
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: ease-in-out all 0.2s;
+        &.active-logo{
+          @include breakpoint($l-md){
+            position: relative;
+            opacity: 1;
+          }
+        }
+      }
+      &.mobile-logo{
+        &.active-logo{
+          @include breakpoint($l-md){
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  
+  .cdm-site-logo-inner{
+    display: block;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  .cdm-site-logo-img{
+    display: block;
+    opacity: 0;
+    width: 100%;
+    height: auto;
+  }
+
+  .sticky-logo{
+    display: flex;
+    a{
+      flex: 1 1 auto;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  }
+
+  .cdm-site-logo-inner{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }

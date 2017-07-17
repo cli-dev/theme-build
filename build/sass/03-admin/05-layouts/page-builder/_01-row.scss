@@ -1,0 +1,71 @@
+.acf-field[data-name="row"]{
+  width: 100% !important;
+  margin: 0 !important;
+  @include spacing(padding, 0.25);
+  &:before{
+      display: none !important;
+    }
+  > .acf-label{
+    display: none;
+  }
+  > .acf-input{
+    width: 100% !important;
+    > .acf-repeater{
+      width: 100%;
+      >.acf-table > tbody{
+        > .acf-row{
+          >.acf-row-handle{
+            &.order{
+              span{
+                &:before{
+                  content: 'Row';
+                  display: block;
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+          >.row-toggle{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+            border-left: 1px solid #e5e5e5;
+            &:before{
+              content: "\f142";
+              display: block;
+              font: 400 20px/1 dashicons;
+              speak: none;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              text-decoration: none!important;
+            }
+          }
+          > .acf-fields{
+            > .acf-tab-wrap.-top{
+              width: calc(100% - 240px) !important;
+              background: none;
+              margin: 0 !important;
+              position: absolute;
+              padding: 0 !important;
+              left: 50%;
+              top: 0;
+              height: 40px;
+              border-bottom: #DFDFDF solid 1px;
+              transform: translate(-50%, -100%);
+            }
+            >.acf-field-repeater{
+              width: 100%;
+              @include spacing(padding-right padding-bottom, 0.25);
+            }
+          }
+        }  
+      }
+    }
+  }
+}

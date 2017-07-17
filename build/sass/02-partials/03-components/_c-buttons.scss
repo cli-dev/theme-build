@@ -1,0 +1,51 @@
+.btn, 
+button, 
+input[type="submit"],
+input[type="reset"]{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 2rem;
+  border-radius: 0;
+  cursor: pointer;
+  transition: ease-in-out all 0.2s;
+  appearance: none;
+  &.center-btn{
+    margin: 0 auto;  
+  }
+  &.btn-full-width{
+    display: block;
+    width: 100%;
+  }
+  &.solid{
+    border: none;
+    color: #FFF;
+    &.white{
+      color: inherit;
+      span{
+        color: inherit;
+      }
+    }
+  }
+  &.outline{
+    border-width: 1px;
+    background: none;
+    background-color: transparent;
+    &:hover{
+      color: #FFF;
+      span{
+        color: #FFF;
+      }
+    }
+    &.white.hover{
+      color: inherit;
+      span{
+        color: inherit;
+      }
+    }
+  }
+  span{
+    transition: ease-in-out all 0.2s;
+  }
+}

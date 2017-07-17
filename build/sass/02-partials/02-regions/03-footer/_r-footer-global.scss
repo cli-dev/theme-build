@@ -1,0 +1,57 @@
+.site-footer{
+  width: 100%;
+  .row{
+    justify-content: center;
+  }
+  .menu{
+    list-style-type: none;
+    margin: 0 -1rem -1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    li{
+      margin: 0 1rem 1rem 0;
+    }
+  }
+  .widget-title{
+    text-align: center;
+    @include breakpoint($s-md){
+      text-align: left;
+    }
+  }
+  .company-info{
+    justify-items: center;
+    @include breakpoint($s-md){
+      justify-items: start;
+    }
+  }
+}
+
+.footer-row{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-inner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @include breakpoint($s-md){
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.footer-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.widget-title{
+  margin-top: 0;
+}

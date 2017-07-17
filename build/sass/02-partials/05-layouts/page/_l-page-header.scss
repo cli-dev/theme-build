@@ -1,0 +1,111 @@
+// Page Header Styles
+
+  .page-header{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .page-header-inner{
+    width: 100%;
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    @include spacing(padding);
+  }
+
+  .page-header-content{
+    display: flex;
+  }
+  
+
+  .header-block{
+    .error404 &,
+    .search &{
+      @include breakpoint($s-sml-portrait){
+        width: 100%;
+      }
+      @include breakpoint($s-lrg-portrait){
+        width: 50%;
+      }
+      @include breakpoint($s-sml-landscape){
+        width: 30%;
+      }
+      @include breakpoint($s-lrg-landscape){
+        width: 50%;
+      }
+      h1{
+        span{
+          display: block;
+          text-align: center;
+          line-height: 1;
+        }
+      }
+      p{
+        text-align: center;
+      }
+      h1,h2,p,.search-btn-wrapper:before{
+        color: #000;
+      }
+      #s::-webkit-input-placeholder {
+        color: #000;
+      }
+      #s:-moz-placeholder { /* Firefox 18- */
+        color: #000;  
+      }
+      #s::-moz-placeholder {  /* Firefox 19+ */
+        color: #000;  
+      }
+      #s:-ms-input-placeholder {  
+        color: #000;  
+      }
+      .search-btn-wrapper,
+      #s{
+        border-bottom-color: #000;
+      }
+    }
+    &.background--dark{
+      h1,h2,p,.search-btn-wrapper:before{
+        color: #FFF;
+      }
+      .search-btn-wrapper,
+      #s{
+        border-bottom-color: #FFF;
+      }
+      #s::-webkit-input-placeholder {
+        color: #FFF;
+      }
+      #s:-moz-placeholder { /* Firefox 18- */
+        color: #FFF;  
+      }
+      #s::-moz-placeholder {  /* Firefox 19+ */
+        color: #FFF;  
+      }
+      #s:-ms-input-placeholder {  
+        color: #FFF;  
+      }
+    }
+    &.background--light{
+      h1,h2,p,.search-btn-wrapper:before{
+        color: #000;
+      }
+      #s::-webkit-input-placeholder {
+        color: #000;
+      }
+      #s:-moz-placeholder { /* Firefox 18- */
+        color: #000;  
+      }
+      #s::-moz-placeholder {  /* Firefox 19+ */
+        color: #000;  
+      }
+      #s:-ms-input-placeholder {  
+        color: #000;  
+      }
+      .search-btn-wrapper,
+      #s{
+        border-bottom-color: #000;
+      }
+    }
+  }

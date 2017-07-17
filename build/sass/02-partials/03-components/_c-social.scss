@@ -1,0 +1,27 @@
+.cdm-social{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  .social-inner{
+    margin: 0 -1rem -1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .social-icon{
+    margin: 0 1rem 1rem 0;
+    a{
+      display: block;
+      line-height: 1;
+    }
+    i{
+      display: block;
+      line-height: 1;
+      transition: ease-in-out 0.2s all;  
+      &.cdm-flickr{
+        font-size: 0.5em;
+      }
+    }
+  }
+}

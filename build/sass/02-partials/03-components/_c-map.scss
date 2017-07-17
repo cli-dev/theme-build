@@ -1,0 +1,21 @@
+// Google Map
+  .cdm-item.map {
+    display: block;
+    width: 100%;
+    &:before{
+      content: '';
+      display: block;
+      width: 100%;
+      padding-bottom: 100%;
+      @include breakpoint($s-md){
+        padding-bottom: 66.67%;
+      }
+      @include breakpoint($l-md){
+        padding-bottom: 56.25%;
+      }
+    }
+    > div{
+      top: 0;
+      left: 0;
+    }
+  }

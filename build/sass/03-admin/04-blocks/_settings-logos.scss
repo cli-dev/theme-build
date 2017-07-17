@@ -1,0 +1,19 @@
+.acf-field.acf-field-flexible-content[data-name="logos"]{
+  @include spacing(width, 0.25, false, true);
+  .acf-fields.-left{
+    >.acf-field{
+      display: flex;
+      flex-direction: column;
+      &:before,
+      &:after{
+        display: none;
+      }
+      > .acf-label{
+        width: auto;
+      }
+      > .acf-input{
+        width: auto;
+      }
+    }
+  }
+}

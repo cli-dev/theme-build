@@ -1,0 +1,58 @@
+// Global Header
+
+  .site-header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: ease-in-out all 0.2s;
+    &.has-side-menu{
+      display: flex;
+      &.stuck{
+        .header-widgets{
+          display: flex;
+        }
+      }
+      .sticky-header{
+        flex: 1 1 auto;
+        display: flex;
+      }
+      .header-widgets{
+        width: 100%;
+        flex: 1 1 auto;
+        .site-header-logo{
+          @include breakpoint($s-md){
+            order: 1;
+          }
+        }
+        .header-widget{
+          width: 100%;
+          @include breakpoint($s-md){
+            order: 2;
+          }
+        }
+        .menu-button-area{
+          @include breakpoint($s-md){
+            order: 3;
+          }
+        }
+      }
+    }
+    &.hidden{
+      opacity: 0;
+    }
+    &.stuck{
+      transform: translateY(-100%);
+      opacity: 0;
+      position: fixed;
+      &.visible-header{
+        transform: translateY(0);
+        opacity: 1;
+        filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.25));
+      }
+      .header-widgets{
+        display: none;
+      }
+    }
+  }

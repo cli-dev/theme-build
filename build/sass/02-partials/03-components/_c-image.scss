@@ -1,0 +1,57 @@
+svg{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+// Single Images
+  .cdm-item.image{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    &.no-title{
+      display: block;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+    &.title-top{
+      flex-direction: column;
+      justify-content: center;
+      .single-image-title{
+        order: 1;
+        text-align: center;  
+      }
+      .image{
+        order: 2;  
+      }
+    }
+    &.title-bottom{
+      flex-direction: column;
+      justify-content: center;
+      .single-image-title{
+        text-align: center;  
+      }
+    }
+    @include breakpoint($s-md){
+      &.title-left{
+        .single-image-title{
+          order: 1;  
+        }
+        .image{
+          order: 2;  
+        }
+      }
+    }
+    a{
+      word-break: break-all;  
+    }
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }

@@ -1,0 +1,53 @@
+// Twitter Feed
+
+.twitter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .cdm-tweet{
+    margin-bottom: -0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .cdm-tweet-txt{
+    text-align: center;
+    width: 100%;
+    margin: 1.5rem 0;
+  }
+  .cdm-tweet-meta{
+    width: auto;
+    overflow: hidden; 
+    line-height: 1;
+    margin: 0 0.5rem 0.5rem;
+    &.cdm-tweet-author .cdm-tweet-icon:before{
+      content: $fa-var-user;
+    }
+    &.cdm-tweet-date .cdm-tweet-icon:before{
+      content: $fa-var-clock-o;
+    }
+    .cdm-tweet-meta-inner{
+      width: calc(100% + 0.5rem);
+      margin: 0 -0.25rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cdm-tweet-icon{
+      display: block;
+      font-size: 1rem;
+      margin: 0 0.25rem;
+      &:before{
+        font-family: 'FontAwesome';
+        display: block;
+        font-style: normal !important;
+        font-weight: normal !important;
+      }
+    }
+    .cdm-tweet-meta-txt{
+      display: block;
+      margin: 0 0.25rem;
+    }
+  }
+}

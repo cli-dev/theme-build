@@ -1,0 +1,49 @@
+.acf-field[data-name="columns"]{
+  width: 100% !important;
+  margin: 0 !important;
+  > .acf-input{
+    > .acf-repeater{
+      >.acf-table > tbody{
+        > .acf-row{
+          >.acf-row-handle{
+            &.order{
+              span{
+                &:before{
+                  content: 'Column';
+                  display: block;
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+          > .acf-fields{
+            @each $breakpoint, $gap in $all-gaps{
+              @include breakpoint($breakpoint) {
+                padding: #{$gap*0.25}vw !important;
+              }
+            }
+            > .acf-tab-wrap.-top{
+              width: calc(100% - 240px) !important;
+              background: none;
+              margin: 0 !important;
+              position: absolute;
+              padding: 0 !important;
+              left: 50%;
+              top: 0;
+              height: 40px;
+              border-bottom: #DFDFDF solid 1px;
+              transform: translate(-50%, -100%);
+            }
+          }
+        }  
+      }
+    }
+    .acf-field.acf-field-flexible-content{
+      margin: 0 !important;
+      width: 100%;
+      > .acf-label{
+        display: none;
+      }
+    }
+  }
+}

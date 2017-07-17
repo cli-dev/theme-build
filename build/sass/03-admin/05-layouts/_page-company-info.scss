@@ -1,0 +1,12 @@
+#acf-group_55d5fec1360ee{
+  &.acf-postbox > .inside{
+    @each $breakpoint, $gap in $all-gaps{
+      @include breakpoint($breakpoint) {
+        padding: #{$gap*0.25}vw 0 0 #{$gap*0.25}vw !important;
+      }
+    }
+    .acf-tab-wrap.-top{
+      @include spacing(margin-bottom, 0.25);
+    }
+  }
+}

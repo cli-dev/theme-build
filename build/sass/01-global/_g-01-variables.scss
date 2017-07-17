@@ -1,0 +1,167 @@
+// Breakpoints
+
+  $s-sml:   360px;
+  $m-sml:   480px;
+  $l-sml:   640px;
+  $s-md:    768px;
+  $m-md:    850px;
+  $l-md:    1024px;
+  $s-lrg:   1280px;
+  $m-lrg:   1440px;
+  $l-lrg:   1600px;
+  $x-lrg:   1920px;
+  $xx-lrg:  2400px;
+  $xxx-lrg: 3000px;
+
+  $s-sml-p: $s-md - 1;
+  $s-sml-l: $s-lrg - 1;
+
+  $landscape: (orientation landscape);
+  $portrait: (orientation portrait);
+  $s-sml-landscape: (max-width $s-sml-l)(orientation landscape);
+  $s-lrg-landscape: (min-width $s-lrg)(orientation landscape);
+  $s-sml-portrait: (max-width $s-sml-p)(orientation portrait);
+  $s-lrg-portrait: (min-width $s-md)(orientation portrait);
+              
+// Grid
+
+  $page-width: 1400px;
+  $main-col: 1000px;
+              
+  $grid-width: #{strip-unit($main-col/$page-width*100)}vw;
+  $gutter: #{(100 - strip-unit($main-col/$page-width * 100))/2}vw;
+
+  // Gaps
+
+    $s-sml-space:   30px;
+    $m-sml-space:   40px;
+    $l-sml-space:   40px;
+    $s-md-space:    50px;
+    $m-md-space:    60px;
+    $l-md-space:    80px;
+    $s-lrg-space:   90px;
+    $m-lrg-space:   90px;
+    $l-lrg-space:   90px;
+    $x-lrg-space:   120px;
+    $xx-lrg-space:  150px;
+
+    $s-sml-g:   strip-unit($s-sml-space/$s-sml*100);
+    $m-sml-g:   strip-unit($m-sml-space/$m-sml*100);
+    $l-sml-g:   strip-unit($l-sml-space/$l-sml*100);
+    $s-md-g:    strip-unit($s-md-space/$s-md*100);
+    $m-md-g:    strip-unit($m-md-space/$m-md*100);
+    $l-md-g:    strip-unit($l-md-space/$l-md*100);
+    $s-lrg-g:   strip-unit($s-lrg-space/$s-lrg*100);
+    $m-lrg-g:   strip-unit($m-lrg-space/$m-lrg*100);
+    $l-lrg-g:   strip-unit($l-lrg-space/$l-lrg*100);
+    $x-lrg-g:   strip-unit($x-lrg-space/$x-lrg*100);
+    $xx-lrg-g:  strip-unit($xx-lrg-space/$xx-lrg*100);
+
+    $s-sml-gap:   #{$s-sml-g}vw;
+    $m-sml-gap:   #{$m-sml-g}vw;
+    $l-sml-gap:   #{$l-sml-g}vw;
+    $s-md-gap:    #{$s-md-g}vw;
+    $m-md-gap:    #{$m-md-g}vw;
+    $l-md-gap:    #{$l-md-g}vw;
+    $s-lrg-gap:   #{$s-lrg-g}vw;
+    $m-lrg-gap:   #{$m-lrg-g}vw;
+    $l-lrg-gap:   #{$l-lrg-g}vw;
+    $x-lrg-gap:   #{$x-lrg-g}vw;
+    $xx-lrg-gap:  #{$xx-lrg-g}vw;
+
+    $all-gaps: ($s-sml, $s-sml-g),
+               ($m-sml, $m-sml-g),
+               ($l-sml, $l-sml-g),
+               ($s-md, $s-md-g),
+               ($m-md, $m-md-g),
+               ($l-md, $l-md-g),
+               ($s-lrg, $s-lrg-g),
+               ($m-lrg, $m-lrg-g),
+               ($l-lrg, $l-lrg-g),
+               ($x-lrg, $x-lrg-g),
+               ($xx-lrg, $xx-lrg-g);
+
+
+
+    $sml-gaps: ($s-sml, $s-sml-g),
+               ($m-sml, $m-sml-g);
+
+    $md-gaps: ($l-sml, $l-sml-g),
+              ($s-md, $s-md-g),
+              ($m-md, $m-md-g);
+
+    $lrg-gaps: ($l-md, $l-md-g),
+               ($s-lrg, $s-lrg-g),
+               ($m-lrg, $m-lrg-g),
+               ($l-lrg, $l-lrg-g),
+               ($x-lrg, $x-lrg-g),
+               ($xx-lrg, $xx-lrg-g);
+
+
+// Colors
+
+  $primary-color: #ef3d32;
+  $secondary-color: #ce352b;
+  $tertiary-color1: #0584af;
+  $tertiary-color2: #028c4b;
+  $tertiary-color3: #faa63a;
+  $tertiary-color4: #4d4d4d;
+  $off-black: #363636;
+  $gray: #707070;
+  $off-white: #eaeaea;
+
+  $colors: ("primary-color", $primary-color),
+           ("secondary-color", $secondary-color),
+           ("tertiary-color1", $tertiary-color1),
+           ("tertiary-color2", $tertiary-color2),
+           ("tertiary-color3", $tertiary-color3),
+           ("tertiary-color4", $tertiary-color4),
+           ("off-black", $off-black),
+           ("gray", $gray),
+           ("off-white", $off-white),
+           ("white", #FFFFFF);       
+
+  $facebook: #3C5A99;
+  $twitter: #55acee;
+  $google: #DC4e41;
+  $linkedin: #007bb5;
+  $tumblr: #35465d;
+  $pinterest: #bd081c;
+  $flickr: #ff0084;
+  $inewswire: #1357A8;
+  $instagram: #d93175;
+  $vimeo: #1ab7ea;
+  $youtube: #cd201f;
+
+  $social-colors: ('facebook', $facebook),
+                  ('twitter', $twitter),
+                  ('google', $google),
+                  ('linkedin', $linkedin),
+                  ('tumblr', $tumblr),
+                  ('pinterest', $pinterest),
+                  ('flickr', $flickr),
+                  ('newswire', $inewswire),
+                  ('instagram', $instagram),
+                  ('vimeo', $vimeo),
+                  ('youtube', $youtube);
+
+// Fonts
+
+  $primary-font: "Roboto", Helvetica, sans-serif;
+  $secondary-font: "Lato", Arial, sans-serif;
+  $tertiary-font: "Lora", Georgia, serif;
+  $base-fs: 16px;
+  $base-lh: 1.5;
+  $base-fs-min: 14px;
+  $base-fs-max: 22px;
+
+  $modularscale: (
+    base: 1rem,
+    ratio: $major-third,
+    48rem: (
+      ratio: $fourth,
+    ),
+    80rem: (
+      ratio: $augmented-fourth,
+    ),
+  );

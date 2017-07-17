@@ -1,0 +1,12 @@
+.acf-field.acf-field-repeater[data-name="theme_colors"]{
+  @include spacing(width, 0.25, false, true);
+  >.acf-label{
+    display: none;
+  }
+  td.acf-fields{
+    flex-wrap: nowrap;
+    >.acf-field{
+      width: auto !important;
+    }
+  }
+}

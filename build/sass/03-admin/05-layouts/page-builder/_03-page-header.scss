@@ -1,0 +1,9 @@
+#acf-group_page_header{
+  > .inside{
+    @each $breakpoint, $gap in $all-gaps{
+      @include breakpoint($breakpoint) {
+        padding: #{$gap*0.25}vw !important;
+      }
+    }
+  }
+}

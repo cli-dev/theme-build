@@ -31,7 +31,7 @@ coverage
 .nyc_output
 
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
-grunt
+.grunt
 
 # Bower dependency directory (https://bower.io/)
 
@@ -39,7 +39,6 @@ grunt
 .lock-wscript
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
-build
 tmp
 
 # Dependency directories
@@ -73,11 +72,5 @@ typings/
 *.css.map
 
 # End of https://www.gitignore.io/api/node,sass,bower
-
-bower.json
-
-config.yml
-
-.jshintrc
 
 package-lock.json

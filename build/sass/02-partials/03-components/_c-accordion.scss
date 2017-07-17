@@ -1,0 +1,11 @@
+// Accordion
+
+  .accordion{
+    .accordion-section-header{
+      cursor: pointer;
+      transition: ease-in-out all 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }

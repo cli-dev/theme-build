@@ -1,0 +1,211 @@
+form{
+  div{
+    &.checker{
+      width: auto;
+      height: auto;
+      span{
+        background: none;
+        position: relative;
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        &.checked:before{
+          content: "\5a";
+        }
+        &:before{
+          content: "\56";
+          font-family: 'ElegantIcons';
+          display: block;
+          text-transform: none;
+          line-height: 1;
+        }
+        input{
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+        }
+      }
+    }
+    &.radio{
+      width: auto;
+      height: auto;
+      span{
+        background: none;
+        position: relative;
+        display: block;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        &.checked:before{
+          content: "\5c";
+        }
+        &:before{
+          content: "\5b";
+          font-family: 'ElegantIcons';
+          display: block;
+          text-transform: none;
+          line-height: 1;
+        }
+        input{
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
+        }
+      }
+    }
+    &.uploader{
+      background: none;
+      height: auto;
+      width: auto;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: stretch;
+      span.filename{
+        height: auto;
+        float: none;
+        margin: 0;
+        width: auto;
+        white-space: normal;
+      }
+      span.action{
+        height: auto;
+        float: none;
+        margin: 0;
+        width: auto;
+        line-height: 1;
+        display: block;
+        text-shadow: none;
+        background-color: inherit;
+        background: none;
+      }
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"]{
+    width: 100%;
+    margin: 0;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  textarea{
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+.select2-container--default{
+  span[class^="select2-selection"]{
+    border-radius: 0;
+    height: auto;
+    .select2-selection__rendered{
+      flex: 1 1 auto;
+    }
+    .select2-selection__arrow {
+      position: relative;
+      top: auto;
+      right: auto;
+      height: auto;
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:before{
+        content: "\43";
+        font-family: 'ElegantIcons';
+        display: block;
+        text-transform: none;
+      }
+      b{
+        display: none;
+      }
+    }
+  }
+  .select2-selection--single{
+    display: flex;
+  }
+  .select2-selection--multiple{
+    .select2-selection__rendered{
+      padding: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      li.select2-selection__choice{
+        float: none;
+        display: inline-flex;
+        justify-content: flex-start;
+        align-items: center;
+        &:before{
+          content: '\4d';
+          font-family: 'ElegantIcons';
+          display: block;
+        }
+      }
+    }
+    .select2-selection__choice__remove{
+      display: none;
+    }
+  }
+}
+
+#searchform{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  @include breakpoint($s-sml-landscape){
+    max-width: 80vw;
+  }
+  @include breakpoint($s-lrg-landscape){
+    max-width: 35vw;
+  }
+  @include breakpoint($s-lrg-portrait){
+    max-width: 80vw;
+  }
+}
+
+.search-btn-wrapper{
+  position: relative;
+  display: block;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  &:before{
+    display: block;
+    content: '\55';
+    font-family: 'ElegantIcons';
+    display: block;
+    transform: rotate(0deg) rotateY(180deg);
+  }
+}
+
+#searchsubmit{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+#s{
+  flex: 1 1 auto;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  background-color: transparent;
+}

@@ -1,0 +1,12 @@
+.acf-field.acf-field-flexible-content,
+.acf-flexible-content{
+  width: 100%;
+  .layout{
+    > .acf-fields{
+      @include spacing(padding-top padding-left, 0.25);
+    }
+  }
+  > .values{
+    margin: 0;
+  }
+}

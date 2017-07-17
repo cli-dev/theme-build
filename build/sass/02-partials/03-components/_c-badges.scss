@@ -1,0 +1,30 @@
+// Badges
+
+  .fbr-badges{
+    display: flex;
+    align-items: stretch;
+    .fbr-badge{
+      width: auto;
+    }
+  }
+
+  #starbadges{
+    display: block;
+  }
+
+  .fbr-badge{
+    display: flex;
+    width: 100%;
+    a{
+      line-height: 0;
+      font-size: 0;
+      position: relative;
+      width: 100%;
+      display: block;
+    }
+    img{
+      width: 100% !important;
+      height: auto;
+      display: block;
+    }
+  }
