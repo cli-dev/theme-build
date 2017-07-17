@@ -1,0 +1,55 @@
+{
+  "name": "cdm-theme",
+  "description": "CDM Theme",
+  "version": "1.0.0",
+  "devDependencies": {
+    "autoprefixer": "latest",
+    "bower-files": "latest",
+    "clean-css": "latest",
+    "cssnano": "latest",
+    "decomment": "latest",
+    "grunt": "latest",
+    "grunt-banner": "latest",
+    "grunt-bower": "latest",
+    "grunt-bower-concat": "latest",
+    "grunt-combine-mq": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-imagemin": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-decomment": "latest",
+    "grunt-includes": "latest",
+    "grunt-newer": "latest",
+    "grunt-notify": "latest",
+    "grunt-postcss": "latest",
+    "grunt-rtlcss": "latest",
+    "grunt-sass": "latest",
+    "grunt-sass-globber": "latest",
+    "grunt-sync": "latest",
+    "jit-grunt": "latest",
+    "jshint-stylish": "latest",
+    "load-grunt-config": "latest",
+    "load-grunt-tasks": "latest",
+    "pixrem": "latest",
+    "postcss": "latest",
+    "postcss-assets": "latest",
+    "sass-breakpoints": "latest"
+  },
+  "license": "UNLICENSED",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cli-dev/theme.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "false": {},
+  "dependencies": {
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}
